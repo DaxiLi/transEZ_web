@@ -273,7 +273,7 @@ export default {
   width: 90%;
   height: auto;
   /*background-color: #2c3e50;*/
-  border-style: groove;
+  /*border-style: groove;*/
   /*min-height: 60vh;*/
   margin: auto;
   margin-top: 6rem;
@@ -384,7 +384,7 @@ textarea, pre {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   line-height: 1.4;
   font-size: 16px;
-  
+
   /* Make the text soft-wrap */
   white-space: pre-wrap;
   word-wrap: break-word;
