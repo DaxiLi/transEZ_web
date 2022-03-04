@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    <p>文件传输助手 File Helper © Aja </p>
+    <footer> i.jieis.cn </footer>
   </div>
 
 </template>
@@ -15,11 +15,12 @@ export default {
 <style scoped>
 
 .footer{
-  position: fixed;
+  /*position: fixed;*/
+  position: relative;
   left: 0px;
   bottom: 0px;
-  width: 100%;
-  height: 50px;
+  width: 100vw;
+  height: 100px;
   background-color: #eee;
   z-index: 9999;
 

@@ -2,23 +2,32 @@
   <div id="app">
 <!--    <img alt="Vue logo" src="./assets/logo.png">-->
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <Passwd></Passwd>
+<!--    <Passwd></Passwd>-->
+    <Header></Header>
+<!--    <Index></Index>-->
+    <Board></Board>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Passwd from "@/components/Passwd";
+// import Passwd from "@/components/Passwd";
 import Footer from "@/components/Footer"
+// import Index from "@/components/Index"
+import Header from "@/components/Header";
+import Board from "@/components/Board";
 
 
 export default {
   name: 'App',
   components: {
+    Board,
+    Header,
     Footer,
     // HelloWorld,
-    Passwd
+    // Passwd
+    // Index
   }
 }
 </script>

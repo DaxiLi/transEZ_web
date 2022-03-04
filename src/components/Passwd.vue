@@ -31,17 +31,8 @@ export default {
 .login-box {
   display: inline-block;
   margin: 100px auto 180px auto;
-  /*width: 80%;*/
   min-height: 200px;
   font-size: 16px;
-
-  /*width: 520px;*/
-  /*display: inline-block;*/
-  /*margin: 100px auto 180px auto;*/
-  /*@media (max-width: 640px) {*/
-  /*  width: 80%;*/
-  /*}*/
-
 
 }
 .input-group {
