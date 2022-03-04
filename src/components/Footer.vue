@@ -16,13 +16,17 @@ export default {
 
 .footer{
   /*position: fixed;*/
-  position: relative;
-  left: 0px;
-  bottom: 0px;
-  width: 100vw;
-  height: 100px;
+  /*position: relative;*/
+  /*left: 0px;*/
+  /*bottom: 0px;*/
+  /*width: 100vw;*/
+  /*height: 100px;*/
   background-color: #eee;
   z-index: 9999;
 
+  margin-top: 30px;
+  padding: 30px 0;
+  border-top: 1px solid #eaeaea;
+  color: #999;
 }
 </style>

@@ -197,37 +197,34 @@ export default {
     }
     ,
     listenerTxt() {
-      function makeExpandingArea(container) {
-        var area = container.getElementsByTagName('textarea')[0];
-        var span = container.getElementsByTagName('span')[0];
-        if (area.addEventListener) {
-          area.addEventListener('input', function () {
-            span.textContent = area.value;
-          }, false);
+      var container = document.getElementById('textarea');
+      var area = container.getElementsByTagName('textarea')[0];
+      var span = container.getElementsByTagName('span')[0];
+      if (area.addEventListener) {
+        area.addEventListener('input', function () {
           span.textContent = area.value;
-        } else if (area.attachEvent) {
-          area.attachEvent('onpropertychange', function () {
-            var html = area.value.replace(/\n/g, '<br/>');
-            span.innerText = html;
-          });
+        }, false);
+        span.textContent = area.value;
+      } else if (area.attachEvent) {
+        area.attachEvent('onpropertychange', function () {
           var html = area.value.replace(/\n/g, '<br/>');
           span.innerText = html;
-        }
-        if (window.VBArray && window.addEventListener) { //IE9
-          area.attachEvent("onkeydown", function () {
-            var key = window.event.keyCode;
-            if (key == 8 || key == 46) span.textContent = area.value;
-
-          });
-          area.attachEvent("oncut", function () {
-            span.textContent = area.value;
-          });//处理粘贴
-        }
-        container.className += "active";
+        });
+        var html = area.value.replace(/\n/g, '<br/>');
+        span.innerText = html;
       }
+      if (window.VBArray && window.addEventListener) { //IE9
+        area.attachEvent("onkeydown", function () {
+          var key = window.event.keyCode;
+          if (key == 8 || key == 46) span.textContent = area.value;
 
-      var areas = document.getElementById('textarea');
-      makeExpandingArea(areas);
+        });
+        area.attachEvent("oncut", function () {
+          span.textContent = area.value;
+        });//处理粘贴
+      }
+      container.className += "active";
+
     }
     ,
     listenTextAera() {
@@ -279,7 +276,7 @@ export default {
   border-style: groove;
   /*min-height: 60vh;*/
   margin: auto;
-  margin-top: 10%;
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
 }
@@ -363,12 +360,12 @@ white-space: nowrap 强制不换行
 
 
 /************  TEXT area CSS  ********/
-textarea,
-pre {
+textarea, pre {
   margin: 0;
   padding: 0;
   outline: 0;
   border: 0;
+
 }
 
 .expandingArea {
@@ -381,7 +378,13 @@ pre {
 .expandingArea pre {
   padding: 5px;
   background: transparent;
-  font: 400 13px/16px helvetica, arial, sans-serif;
+
+  /*font: 400 13px/16px helvetica, arial, sans-serif;*/
+
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  line-height: 1.4;
+  font-size: 16px;
+  
   /* Make the text soft-wrap */
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -389,6 +392,9 @@ pre {
 }
 
 .expandingArea textarea {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  line-height: 1.4;
+  font-size: 16px;
 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
