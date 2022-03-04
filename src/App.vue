@@ -4,8 +4,8 @@
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
 <!--    <Passwd></Passwd>-->
     <Header></Header>
-<!--    <Index></Index>-->
-    <Board></Board>
+    <Index v-if="path === '/'"></Index>
+    <Board v-else></Board>
     <Footer></Footer>
   </div>
 </template>
@@ -14,7 +14,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 // import Passwd from "@/components/Passwd";
 import Footer from "@/components/Footer"
-// import Index from "@/components/Index"
+import Index from "@/components/Index"
 import Header from "@/components/Header";
 import Board from "@/components/Board";
 
@@ -26,11 +26,27 @@ export default {
     Header,
     Footer,
     // HelloWorld,
-    // Passwd
-    // Index
+    // Passwd,
+    Index
+  },
+  data() {
+    return {
+      isLogin: false,
+      path: window.location.pathname
+    }
+  },
+
+  computed(){
+    // this.path = window.location.pathn
+  },
+  created() {
+      console.log('path name', window.location.pathname);
+      console.log(this.path);
+      console.log(this.path == "/");
   }
 }
 </script>
+
 
 <style>
 #app {

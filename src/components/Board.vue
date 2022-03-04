@@ -115,7 +115,7 @@
                   style="color: red;">上传文件有效期为7天，到期将自动删除。</span></p>
                 <div id="dragBox" v-bind:class="{'drag-box': true , 'drag-active':dragActive}">
                   <input type="file" id="filePicker" class="file-picker">
-                  <div class="tip-word"><i class="iconfont icon-plus"></i> 请将文件至此或点击上传（全格式）
+                  <div class="tip-word"><i class="iconfont icon-plus"></i> 请将文件至此或点击上传
                   </div>
                 </div>
                 <div>
