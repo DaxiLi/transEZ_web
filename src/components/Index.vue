@@ -42,6 +42,7 @@ export default {
 }
 
 
+
 .input-group-field {
   border-width: thin;
   border-radius: 15px 0 0 15px ;

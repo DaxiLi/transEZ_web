@@ -102,7 +102,8 @@
 
               <div v-show="showText" class="expandingArea " id="textarea">
                 <pre><span></span><br></pre>
-                <textarea></textarea>
+                <textarea placeholder="使用后请主动删除剪切板，避免隐私泄露
+请勿非法用途！"></textarea>
               </div>
 
 
@@ -271,12 +272,12 @@ export default {
 
 .container {
   width: 90%;
-  height: auto;
-  /*background-color: #2c3e50;*/
-  /*border-style: groove;*/
-  /*min-height: 60vh;*/
+  min-height: 70vh;
   margin: auto;
-  margin-top: 6rem;
+  margin-top: 3rem;
+  /*margin-bottom: 0;*/
+  padding-top: 3rem;
+  /*margin-bottom: -150px;*/
   display: flex;
   flex-direction: column;
 }
